@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace BookStore_BackEnd
+namespace BookStoreDbContext
 {
     public class Program
     {

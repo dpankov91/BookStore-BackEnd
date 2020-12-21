@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookStore.Infrastructure.Data
 {
-    public class DataInitializer
+    public class DataInitializer : IDataInitializer
     {
     }
 }

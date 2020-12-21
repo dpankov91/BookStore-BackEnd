@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BookStore.Core.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BookStore.Core.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Core.Entities.dll": {}
+        }
       }
     }
   },
@@ -172,10 +182,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BookStore.Core.Entities/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Core.Entities/BookStore.Core.Entities.csproj",
+      "msbuildProject": "../BookStore.Core.Entities/BookStore.Core.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "BookStore.Core.Entities >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -205,7 +221,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\dpank\\Documents\\GitHub\\BookStore-BackEnd\\BookStore.Core.Entities\\BookStore.Core.Entities.csproj": {
+              "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\BookStore-BackEnd\\BookStore.Core.Entities\\BookStore.Core.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

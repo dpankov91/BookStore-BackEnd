@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookStore.Core.ApplicationService.Implementation
 {
-    public class AuthorService
+    public class AuthorService : IAuthorService
     {
     }
 }
