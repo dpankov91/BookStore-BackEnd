@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Core.Entities\BookStore.Core.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -76,6 +76,7 @@ namespace BookStoreDbContext
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            #region DBSettings
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -91,15 +92,13 @@ namespace BookStoreDbContext
             {
                 using var scope = app.ApplicationServices.CreateScope();
                 var ctx = scope.ServiceProvider.GetRequiredService<BookStoreDBContext>();
-                var dbIntialiser = scope.ServiceProvider.GetRequiredService<IDataInitializer>();
+                var dataInitializer = scope.ServiceProvider.GetRequiredService<IDataInitializer>();
 
-                /*ctx.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS dbo.Users, dbo.Posters, dbo.Tags, dbo.Collections," +
-                    "dbo.Frames, dbo.Sizes, dbo.PosterTags, dbo.PosterSizes, dbo.Favourites, dbo.WorkSpaces," +
-                    "dbo.WorkSpacePosters");*/
                 ctx.Database.EnsureCreated();
 
-                // dbIntialiser.SeedDB(ctx);
+                // dataInitializer.SeedDB(ctx);
             }
+            #endregion
 
             app.UseCors("AllowEverything");
 
