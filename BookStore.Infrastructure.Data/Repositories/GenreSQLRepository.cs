@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookStore.Infrastructure.Data.Repositories
 {
-    class GenreSQLRepository
+    public class GenreSQLRepository
     {
     }
 }

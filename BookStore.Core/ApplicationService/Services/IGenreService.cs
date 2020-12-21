@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookStore.Core.ApplicationService.Services
 {
-    interface IGenreService
+    public interface IGenreService
     {
     }
 }

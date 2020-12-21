@@ -4,7 +4,10 @@ using System.Text;
 
 namespace BookStore.Core.Entities
 {
-    class Author
+    public class Author
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
     }
 }
