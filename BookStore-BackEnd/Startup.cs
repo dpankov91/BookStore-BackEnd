@@ -97,7 +97,7 @@ namespace BookStoreDbContext
 
                 ctx.Database.EnsureCreated();
 
-                // dataInitializer.SeedDB(ctx);
+                dataInitializer.SeedDB(ctx);
             }
             #endregion
 

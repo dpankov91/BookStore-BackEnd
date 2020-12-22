@@ -9,10 +9,15 @@ namespace BookStore.Infrastructure.Data
     public class DataInitializer : IDataInitializer
     {
         private readonly IGenreRepository _genreRepo;
+        private readonly IAuthorRepository _authorRepo;
+        private readonly IBookRepository _bookRepo;
 
-        public DataInitializer(IGenreRepository genreRepository)
+        public DataInitializer(IGenreRepository genreRepository, IAuthorRepository authorRepository, 
+                                        IBookRepository bookRepository)
         {
             _genreRepo = genreRepository;
+            _authorRepo = authorRepository;
+            _bookRepo = bookRepository;
         }
         public void SeedDB(BookStoreDBContext _ctx)
         {
@@ -58,7 +63,39 @@ namespace BookStore.Infrastructure.Data
                 Name = "Satire"
             };
             _genreRepo.CreateGenre(genre7);
-        #endregion
+            #endregion
+
+            #region Authors
+            var author1 = new Author()
+            {
+                Name = "Paulo Coelho"
+            };
+            _authorRepo.CreateAuthor(author1);
+
+            var author2 = new Author()
+            {
+                Name = "Erich Maria Remarque"
+            };
+            _authorRepo.CreateAuthor(author2);
+
+            var author3 = new Author()
+            {
+                Name = "George Orwell"
+            };
+            _authorRepo.CreateAuthor(author3);
+
+            var author4 = new Author()
+            {
+                Name = "Daniel Keyes"
+            };
+            _authorRepo.CreateAuthor(author4);
+
+            var author5 = new Author()
+            {
+                Name = "Jerome David Salinger"
+            };
+            _authorRepo.CreateAuthor(author5);
+            #endregion
         }
     }
 }
