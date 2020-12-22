@@ -94,8 +94,21 @@ namespace BookStoreDbContext.Controllers
 
         // DELETE api/<GenreController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Genre> Delete(int id)
         {
+            try
+            {
+                if(id < 1)
+                {
+                    return BadRequest("Please enter correct id. Id must be bigger than 0");
+                }
+                _genreService.DeleteGenre(id);
+                return Ok("Genre with id:" + id + " successfully deleted");
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 }
