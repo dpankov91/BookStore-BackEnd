@@ -62,8 +62,16 @@ namespace BookStoreDbContext.Controllers
 
         // POST api/<GenreController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Genre> Post([FromBody] Genre genre)
         {
+            try
+            {
+                return Ok(_genreService.CreateGenre(genre));
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/<GenreController>/5
