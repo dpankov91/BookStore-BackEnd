@@ -62,7 +62,7 @@ namespace BookStoreDbContext
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IAuthorRepository, AuthorSQLRepository>();
 
-            services.AddScoped<IDataInitializer, DataInitializer>();
+            services.AddTransient<IDataInitializer, DataInitializer>();
             #endregion
 
             #region CORS
