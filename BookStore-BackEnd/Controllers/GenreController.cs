@@ -76,8 +76,20 @@ namespace BookStoreDbContext.Controllers
 
         // PUT api/<GenreController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<Genre> Put(int id, [FromBody] Genre genre)
         {
+            try
+            {
+                if(id < 1 || genre.Id != id)
+                {
+                    return BadRequest("Please enter correct id. Id must be bigger than 0");
+                }
+                return Ok(_genreService.UpdateGenre(genre));
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE api/<GenreController>/5
