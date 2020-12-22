@@ -30,19 +30,34 @@ namespace BookStoreDbContext.Controllers
                 {
                     return Ok(_genreService.ReadAllGenres());
                 }
-                return StatusCode(404, "No Genres in database");
+                return NotFound();
             }
             catch (System.Exception)
             {
-                return StatusCode(500, "Error when trying to get all genre from database");
+                return BadRequest();
             }
         }
 
         // GET api/<GenreController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<Genre> Get(int id)
         {
-            return "value";
+            try
+            {
+                if(id < 1 || id.Equals(null))
+                {
+                    return StatusCode(500, "Please enter correct id. Id cant be less than 1");
+                }
+                if(_genreService.ReadGenreById(id) == null)
+                {
+                    return NotFound();
+                }
+                return Ok(_genreService.ReadGenreById(id));
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // POST api/<GenreController>
