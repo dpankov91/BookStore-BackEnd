@@ -36,9 +36,9 @@ namespace BookStore.Infrastructure.Data.Repositories
 
         public Genre DeleteGenre(int id)
         {
-            var genre = _ctx.Remove(new Genre { Id = id });
+            var genreToDelete = _ctx.Remove(new Genre { Id = id });
             _ctx.SaveChanges();
-            return genre.Entity;
+            return genreToDelete.Entity;
         }
 
         public Genre UpdateGenre(Genre genreToUpdate)
