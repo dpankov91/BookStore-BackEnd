@@ -17,6 +17,19 @@ namespace BookStore.Infrastructure.Data.Repositories
             _ctx = bookStoreDBContext;
         }
 
+        public List<Book> ReadAllBooks()
+        {
+            return _ctx.Books.ToList();
+        }
+
+        public Book GetBookById(int id)
+        {
+            return _ctx.Books
+                .Include(book => book.Author)
+                 .Include(book => book.Genre)
+                  .FirstOrDefault(book => book.Id == id);
+        }
+
         public Book CreateBook(Book book)
         {
             _ctx.Attach(book).State = EntityState.Added;
@@ -29,16 +42,6 @@ namespace BookStore.Infrastructure.Data.Repositories
             var bookToDelete = _ctx.Remove(new Book() { Id = id });
             _ctx.SaveChanges();
             return bookToDelete.Entity;
-        }
-
-        public Book GetBookById(int id)
-        {
-            return _ctx.Books.FirstOrDefault(book => book.Id == id);
-        }
-
-        public List<Book> ReadAllBooks()
-        {
-            return _ctx.Books.ToList();
         }
 
         public Book UpdateBook(Book bookToUpdate)
