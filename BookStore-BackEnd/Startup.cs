@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using BookStore.Infrastructure.Data.Repositories;
+using Newtonsoft.Json;
 
 namespace BookStoreDbContext
 {
@@ -69,6 +70,14 @@ namespace BookStoreDbContext
             services.AddCors(options => options.AddPolicy("AllowEverything", builder => builder.AllowAnyOrigin()
                                                                                                .AllowAnyMethod()
                                                                                                .AllowAnyHeader()));
+            #endregion
+
+            #region Ignore Loops
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            };
+            services.AddControllers().AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
             #endregion
 
             services.AddControllers();
