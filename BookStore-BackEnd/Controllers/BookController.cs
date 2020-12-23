@@ -58,20 +58,53 @@ namespace BookStoreDbContext.Controllers
 
         // POST api/<BookController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Book> Post([FromBody] Book book)
         {
+            try
+            {
+                return Ok(_bookService.CreateBook(book));
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/<BookController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<Book> Put(int id, [FromBody] Book book)
         {
+            try
+            {
+                if(id < 1 || book.Id != id)
+                {
+                    return BadRequest("Ids must match and must be bigger than 0");
+                }
+                _bookService.UpdateBook(book);
+                return Ok();
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE api/<BookController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Book> Delete(int id)
         {
+            try
+            {
+                if(id < 1)
+                {
+                    return BadRequest("Enter correct id. Id should be bigger than 1");
+                }
+                return Ok(_bookService.DeleteBook(id));
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 }
