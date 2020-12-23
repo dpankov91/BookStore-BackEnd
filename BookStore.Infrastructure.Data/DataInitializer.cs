@@ -96,6 +96,26 @@ namespace BookStore.Infrastructure.Data
             };
             _authorRepo.CreateAuthor(author5);
             #endregion
+
+            #region Books
+            Book book1 = new Book()
+            {
+                Name = "Alchemist",
+                PublishYear = new DateTime(1988, 01, 01),
+                AuthorId = 1,
+                GenreId = 1
+            };
+            _bookRepo.CreateBook(book1);
+
+            Book book2 = new Book()
+            {
+                Name = "Three Comrades",
+                PublishYear = new DateTime(1936, 01, 01),
+                AuthorId = 2,
+                GenreId = 4
+            };
+            _bookRepo.CreateBook(book2);
+            #endregion 
         }
     }
 }

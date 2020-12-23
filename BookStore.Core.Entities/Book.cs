@@ -10,7 +10,7 @@ namespace BookStore.Core.Entities
 
         public string Name { get; set; }
 
-        public DateTime ReleaseDate { get; set; }
+        public DateTime PublishDate { get; set; }
 
         public int AuthorId { get; set; }
         public Author Author { get; set; }
