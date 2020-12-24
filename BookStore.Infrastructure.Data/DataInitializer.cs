@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BookStore.Core.DomainService;
 using BookStore.Core.Entities;
+using BookStore.Core.ISecurity;
 
 namespace BookStore.Infrastructure.Data
 {
@@ -11,13 +12,17 @@ namespace BookStore.Infrastructure.Data
         private readonly IGenreRepository _genreRepo;
         private readonly IAuthorRepository _authorRepo;
         private readonly IBookRepository _bookRepo;
+        private readonly IAuthenticationHelper _authenticationHelper;
+        private readonly IUserRepository _userRepo;
 
         public DataInitializer(IGenreRepository genreRepository, IAuthorRepository authorRepository, 
-                                        IBookRepository bookRepository)
+            IBookRepository bookRepository, IAuthenticationHelper authenticationHelper, IUserRepository userRepository)
         {
             _genreRepo = genreRepository;
             _authorRepo = authorRepository;
             _bookRepo = bookRepository;
+            _authenticationHelper = authenticationHelper;
+            _userRepo = userRepository;
         }
         public void SeedDB(BookStoreDBContext _ctx)
         {
@@ -115,7 +120,32 @@ namespace BookStore.Infrastructure.Data
                 GenreId = 4
             };
             _bookRepo.CreateBook(book2);
-            #endregion 
+            #endregion
+
+            #region Users
+            string password = "1234";
+            byte[] passwordHashJohn, passwordSaltJohn, passwordHashAnna, passwordSaltAnna;
+            _authenticationHelper.CreatePasswordHash(password, out passwordHashJohn, out passwordSaltJohn);
+            _authenticationHelper.CreatePasswordHash(password, out passwordHashAnna, out passwordSaltAnna);
+
+            var Admin = new User()
+            {
+                Username = "Admin",
+                PasswordHash = passwordHashJohn,
+                PasswordSalt = passwordSaltJohn,
+                IsAdmin = true
+            };
+            _userRepo.CreateUser(Admin);
+
+            var User = new User()
+            {
+                Username = "User",
+                PasswordHash = passwordHashAnna,
+                PasswordSalt = passwordSaltAnna,
+                IsAdmin = false
+            };
+            _userRepo.CreateUser(User);
+            #endregion
         }
     }
 }
