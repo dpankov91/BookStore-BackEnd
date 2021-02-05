@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8ipXAi7J2KFk6c7wHm4j6Qhxu808I5YAhqU3gyNRiR0JiDIopf4Z7TsZ8hbqY3xziRFT0uFlstGjKCZwDZ5uQw==",
+  "dgSpecHash": "vD7wDUSG9DSjLOIb2Ay6fRL/7MmBs5rRzMYFE0wUzt7pQLi1tBD3Ky6tDIWpTzi7NyWlgQdkrQ5HcMT0hqbbng==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\BookStore-BackEnd\\BookStore.Core.Entities\\BookStore.Core.Entities.csproj",
   "expectedPackageFiles": [

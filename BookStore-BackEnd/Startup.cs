@@ -38,7 +38,7 @@ namespace BookStoreDbContext
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region DBSettings
+            #region DB Settings
             if (Environment.IsDevelopment())
             {
                 services.AddDbContext<BookStoreDBContext>(
@@ -124,7 +124,7 @@ namespace BookStoreDbContext
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            #region DBSettings
+            #region DB Settings
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
