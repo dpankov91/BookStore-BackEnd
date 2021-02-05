@@ -1,11 +1,11 @@
 pipeline{
 	agent any
-		trigger{
+		trigger {
 		 cron("0 * * * *")
 }
 stages {
-	stage("Build"){
-	  steps{
+	stage("Build") {
+	  steps {
 	    sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.csproj"
 		}
 	}
