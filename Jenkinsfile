@@ -4,6 +4,7 @@ pipeline {
         stage("Build Web") {
             steps {
                 echo "===== OPTIONAL: Will build the website (if needed) ====="
+				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.sln"
             }
         }
         stage("Build API") {
