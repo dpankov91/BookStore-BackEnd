@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RsGipiAUt+rKy93vMe7q8Rt1RCP/0qV5k1kbmjWF4r5zB9p6DJihJHw58bzSecRpV727Lc3VRG6wYPP6jN5ctg==",
+  "dgSpecHash": "WsBRN1+R5ZkaSQ2XtgHx8UAIFPprt3ahuMvmpsDC6Wb1sXvt3UFiH8Kc0KhQ08ybon5jPBavCZTTpkGhDbGudw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\BookStore-BackEnd\\BookStore.Infrastructure.Data\\BookStore.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
