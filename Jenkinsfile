@@ -10,6 +10,7 @@ pipeline {
         stage("Build API") {
             steps {
                 echo "===== REQUIRED: Will build the API project ====="
+				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.csproj"
             }
         }
         stage("Build database") {
