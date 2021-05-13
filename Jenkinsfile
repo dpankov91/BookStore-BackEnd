@@ -43,7 +43,7 @@ pipeline {
         }
         stage("Automated acceptance test") {
             steps {
-                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
+                //echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
             }
         }
     }
