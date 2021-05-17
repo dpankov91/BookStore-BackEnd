@@ -38,8 +38,8 @@ namespace BookStoreDbContext
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region DB Settings
-            if (Environment.IsDevelopment())
+            #region DB Settings Commented
+            /*if (Environment.IsDevelopment())
             {
                 services.AddDbContext<BookStoreDBContext>(
                     opt =>
@@ -54,7 +54,15 @@ namespace BookStoreDbContext
                     {
                         opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection"));
                     });
-            }
+            }*/
+            #endregion
+
+            #region DB DevOps
+            services.AddDbContext<BookStoreDBContext>(
+              opt =>
+              {
+                  opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection"));
+              });
             #endregion
 
             #region AddScoped
@@ -124,8 +132,8 @@ namespace BookStoreDbContext
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            #region DB Settings
-            if (env.IsDevelopment())
+            #region DB Settings Commented
+            /*if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 using var scope = app.ApplicationServices.CreateScope();
@@ -145,7 +153,17 @@ namespace BookStoreDbContext
                 ctx.Database.EnsureCreated();
 
                 dataInitializer.SeedDB(ctx);
-            }
+            }*/
+            #endregion
+
+            #region db DevOps
+            using var scope = app.ApplicationServices.CreateScope();
+            var ctx = scope.ServiceProvider.GetRequiredService<BookStoreDBContext>();
+            var dataInitializer = scope.ServiceProvider.GetRequiredService<IDataInitializer>();
+
+            ctx.Database.EnsureCreated();
+
+            dataInitializer.SeedDB(ctx);
             #endregion
 
             app.UseCors("AllowEverything");

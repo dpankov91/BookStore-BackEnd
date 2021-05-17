@@ -25,3 +25,11 @@ CREATE TABLE Book(
     ON DELETE NO ACTION    
     ON UPDATE NO ACTION
 )
+
+CREATE TABLE User(
+	Id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+	Username VARCHAR(75) NOT NULL,
+    PasswordHash varbinary(max) NOT NULL,
+    PasswordSalt varbinary(max) NOT NULL,
+    IsAdmin boolean NOT NULL 
+)

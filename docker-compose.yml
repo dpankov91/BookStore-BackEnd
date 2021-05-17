@@ -2,8 +2,8 @@ version: "3.3"
 
 services:
     mssql-db:
-      #build: ./db/docker
-      image: mcr.microsoft.com/mssql/server
+      build: ./db/docker
+      #image: mcr.microsoft.com/mssql/server
       ports:
         - 2323:1433
       environment: 
@@ -11,6 +11,16 @@ services:
         SA_PASSWORD: HelloW0rld  
         MSSQL_DB: bookDb
   
+    application:
+      image: dpankov91/todoapi
+      environment: 
+        ASPNETCORE_ENVIRONMENT: Development
+        DatabaseConnectionString: Server=mssql-db;Database=bookDb;UserId=sa;Password=HelloW0rld;
+      depends_on: 
+        - mssql-db
+      ports: 
+        - 5151:80
+
     flyway:
       image: flyway/flyway
       command: migrate
