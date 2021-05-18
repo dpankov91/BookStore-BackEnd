@@ -12,7 +12,7 @@ services:
         MSSQL_DB: bookDb
   
     application:
-      image: dpankov91/todoapi
+      image: dpankov91/bookstore
       environment: 
         ASPNETCORE_ENVIRONMENT: Development
         DatabaseConnectionString: Server=mssql-db;Database=bookDb;UserId=sa;Password=HelloW0rld;
