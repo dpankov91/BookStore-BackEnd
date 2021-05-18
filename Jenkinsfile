@@ -46,6 +46,7 @@ pipeline {
                 sh "docker push dpankov91/?1"
       
         }
+        }
 	stage("Deliver Web and Api") {
         	steps {
 			parallel(
@@ -74,5 +75,4 @@ pipeline {
             }
         }
     }
-}
 }
