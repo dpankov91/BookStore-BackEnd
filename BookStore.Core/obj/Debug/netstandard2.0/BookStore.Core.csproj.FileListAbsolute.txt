@@ -10,3 +10,15 @@ C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core\obj\Debug\netst
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.csproj.CopyComplete
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.dll
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.pdb
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\bin\Debug\netstandard2.0\BookStore.Core.deps.json
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\bin\Debug\netstandard2.0\BookStore.Core.dll
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\bin\Debug\netstandard2.0\BookStore.Core.pdb
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\bin\Debug\netstandard2.0\BookStore.Core.Entities.dll
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\bin\Debug\netstandard2.0\BookStore.Core.Entities.pdb
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.csprojAssemblyReference.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.AssemblyInfoInputs.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.AssemblyInfo.cs
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.csproj.CoreCompileInputs.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.csproj.CopyComplete
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.dll
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core\obj\Debug\netstandard2.0\BookStore.Core.pdb

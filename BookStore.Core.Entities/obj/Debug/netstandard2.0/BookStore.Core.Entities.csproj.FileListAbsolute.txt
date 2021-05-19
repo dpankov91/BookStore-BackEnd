@@ -7,3 +7,12 @@ C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core.Entities\obj\De
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.csproj.CoreCompileInputs.cache
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.dll
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.pdb
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\bin\Debug\netstandard2.0\BookStore.Core.Entities.deps.json
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\bin\Debug\netstandard2.0\BookStore.Core.Entities.dll
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\bin\Debug\netstandard2.0\BookStore.Core.Entities.pdb
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.csprojAssemblyReference.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.AssemblyInfoInputs.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.AssemblyInfo.cs
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.csproj.CoreCompileInputs.cache
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.dll
+C:\Users\kulsoom-Abbas\source\DevOps\BookStoreBackend\BookStore-BackEnd\BookStore.Core.Entities\obj\Debug\netstandard2.0\BookStore.Core.Entities.pdb

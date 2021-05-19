@@ -4,16 +4,19 @@ using System.Text;
 using BookStore.Core.ApplicationService.Services;
 using BookStore.Core.DomainService;
 using BookStore.Core.Entities;
+using BookStore.Core.ISecurity;
 
 namespace BookStore.Core.ApplicationService.Implementation
 {
     public class BookService : IBookService
     {
         private readonly IBookRepository _bookRepo;
+      
 
         public BookService(IBookRepository bookRepository)
         {
             _bookRepo = bookRepository;
+            
         }
         public List<Book> ReadAllBooks()
         {
