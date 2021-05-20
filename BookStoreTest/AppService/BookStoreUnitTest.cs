@@ -67,5 +67,19 @@ namespace BookStoreTest.AppService
             service.DeleteBook(1 );
             BookRepoMock.Verify(r => r.DeleteBook(1), Times.Once);
         }
+
+        [Fact]
+
+        public void Delete_BookStore_ShouldFail_WithIncorrectParam()
+        {
+            var BookRepoMock = new Mock<IBookRepository>();
+            IBookService service = new BookService(BookRepoMock.Object);
+            var deletedBookStore = new Book()
+                { Id = -6, Name = "" };
+            BookRepoMock.Setup(r => r.DeleteBook(-6)).Returns(() => deletedBookStore);
+            service.DeleteBook(-6);
+            BookRepoMock.Verify(r => r.DeleteBook(-6), Times.Once);
+
+        }
     }
 }
