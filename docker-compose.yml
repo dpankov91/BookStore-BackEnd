@@ -5,7 +5,7 @@ services:
       build: ./db/docker
       #image: mcr.microsoft.com/mssql/server
       ports:
-        - 2323:1433
+        - 1212:1433
       environment: 
         ACCEPT_EULA: "Y"
         SA_PASSWORD: HelloW0rld  
@@ -15,7 +15,7 @@ services:
       image: dpankov91/bookstore
       environment: 
         ASPNETCORE_ENVIRONMENT: Development
-        DatabaseConnectionString: Server=mssql-db;Database=bookDb;UserId=sa;Password=HelloW0rld;
+        DatabaseConnectionString: Server=mssql-db;Database=bookDb;User Id=sa;Password=HelloW0rld;
       depends_on: 
         - mssql-db
       ports: 

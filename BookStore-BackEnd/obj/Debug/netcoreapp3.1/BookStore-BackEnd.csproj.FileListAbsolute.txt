@@ -90,3 +90,8 @@ C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\ne
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\BookStore.Core.pdb
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\BookStore.Infrastructure.Data.pdb
 C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\obj\Debug\netcoreapp3.1\BookStore-BackEnd.csproj.CopyComplete
+C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dpank\Documents\GitHub\BookStore-BackEnd\BookStore-BackEnd\obj\Debug\netcoreapp3.1\BookStore-BackEnd.MvcApplicationPartsAssemblyInfo.cs

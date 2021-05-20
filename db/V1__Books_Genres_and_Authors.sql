@@ -12,15 +12,4 @@ CREATE TABLE Book(
 	Id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	Name VARCHAR(75) NOT NULL,
     PublishYear DateTime NOT NULL
-    
-    
-    CONSTRAINT FK_Book_Author FOREIGN KEY (AuthorId)     
-    REFERENCES dbo.Author (AuthorId)     
-    ON DELETE NO ACTION    
-    ON UPDATE NO ACTION
-
-    CONSTRAINT FK_Book_Genre FOREIGN KEY (GenreId)     
-    REFERENCES dbo.Genre (GenreId)     
-    ON DELETE NO ACTION    
-    ON UPDATE NO ACTION
 )
