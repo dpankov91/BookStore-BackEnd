@@ -22,20 +22,9 @@ pipeline {
 		        sh "dotnet test XUnitTest/XUnitTest.csproj"
             }
         }
-	stage("Deliver Web and Api") {
-        	steps {
-			parallel(
-				deliverWeb: {
-					    sh "docker build . -t bookstoref"
-                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
-                    {
-                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                    }
-                    sh "docker image tag bookstoref dpankov91/bookstoref" 
-                    sh "docker push dpankov91/bookstoref"
-				    },
-				deliverApi: {
-		            sh "docker build . -t bookstore"
+        stage("Deliver API") {     
+            steps {
+             sh "docker build . -t bookstore"
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
                     {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
@@ -43,9 +32,7 @@ pipeline {
                     sh "docker image tag bookstore dpankov91/bookstore" 
                     sh "docker push dpankov91/bookstore"
 				    }	
-			)
             }
-        }	
         stage("Release staging environment") {
             steps {
                 echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
