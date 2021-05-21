@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage("Pull frontend repository") {
+            steps {
+                sh "rm -r BookStore-FrontEnd"
+                sh "git clone https://github.com/dpankov91/BookStore-FrontEnd BookStore-FrontEnd"
+            }
         stage("Build Web") {
             steps {
                 echo "===== OPTIONAL: Will build the website (if needed) ====="
@@ -16,31 +21,8 @@ pipeline {
         stage("Test API") {
             steps {
                 echo "===== REQUIRED: Will execute unit tests of the API project ====="
-		sh "dotnet test test/UnitTest UnitTest.csproj"
+		        sh "dotnet test test/UnitTest UnitTest.csproj"
             }
-        }
-        stage("Deliver Web") {
-            steps {
-                echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
-		        sh "docker build src/. -t dpankov91/?1 -f ?2/Dockerfile"
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
-                {
-                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                }
-                sh "docker push dpankov91/?1"
-            }
-        }
-        stage("Deliver API") {     
-            steps {
-                // echo "===== REQUIRED: Will deliver API to Docker Hub ====="
-                sh "docker build src/. -t dpankov91/?1 -f ?2/Dockerfile"
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
-                {
-                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                }   
-                sh "docker push dpankov91/?1"
-      
-        }
         }
 	stage("Deliver Web and Api") {
         	steps {
@@ -50,9 +32,14 @@ pipeline {
 					sh "docker push ??"
 				},
 				deliverApi: {
-					sh "docker build ./src/?? -t ??"
-					sh "docker push ??"
-				}
+					echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
+		            sh "docker build . -t dpankov91/bookstore"
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                    {
+                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                    }
+                    sh "docker push dpankov91/?1"
+				    }
 			)
             }
         }	

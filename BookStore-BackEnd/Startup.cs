@@ -62,8 +62,7 @@ namespace BookStoreDbContext
 
             #region DB DevOps
             services.AddDbContext<BookStoreDBContext>(b => b
-                .UseSqlServer(Environment.GetEnvironmentVariable("DatabaseConnectionString"))
-                //.LogTo(Console.WriteLine)
+                .UseSqlServer(Environment.GetEnvironmentVariable("DatabaseConnectionString") ?? "Server=localhost,1212;Database=bookDb;User Id=sa;Password=HelloW0rld;")
             );
             #endregion
 
