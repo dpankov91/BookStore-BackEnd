@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore-BackEnd", "BookStore-BackEnd.csproj", "{3ACBF097-E7F5-4820-9A1B-7B51A4831E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore-BackEnd", "BookStore-BackEnd.csproj", "{3ACBF097-E7F5-4820-9A1B-7B51A4831E01}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BF94C17E-9705-41FC-A27F-7A113AA5BD43}"
 EndProject
@@ -11,11 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{067CE377-5E02-4698-8066-3C595AB6547F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Core", "..\BookStore.Core\BookStore.Core.csproj", "{47E1A6FC-BA18-47FF-8ECB-F49148A53503}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Core", "..\BookStore.Core\BookStore.Core.csproj", "{47E1A6FC-BA18-47FF-8ECB-F49148A53503}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Core.Entities", "..\BookStore.Core.Entities\BookStore.Core.Entities.csproj", "{1A63565B-E9C9-4F3F-8DDC-B81EA104A0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Core.Entities", "..\BookStore.Core.Entities\BookStore.Core.Entities.csproj", "{1A63565B-E9C9-4F3F-8DDC-B81EA104A0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Infrastructure.Data", "..\BookStore.Infrastructure.Data\BookStore.Infrastructure.Data.csproj", "{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Infrastructure.Data", "..\BookStore.Infrastructure.Data\BookStore.Infrastructure.Data.csproj", "{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreUnitTest", "..\BookStoreUnitTest\BookStoreUnitTest.csproj", "{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{47E1A6FC-BA18-47FF-8ECB-F49148A53503} = {BF94C17E-9705-41FC-A27F-7A113AA5BD43}
 		{1A63565B-E9C9-4F3F-8DDC-B81EA104A0FD} = {BF94C17E-9705-41FC-A27F-7A113AA5BD43}
 		{495B82D9-63F5-42E3-ABE2-D09D8F8C6251} = {684F249F-CE7E-44BD-914E-F27DF7BE0D4A}
+		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1} = {067CE377-5E02-4698-8066-3C595AB6547F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DC275C9-C50C-4240-B3D1-6FC505123762}
