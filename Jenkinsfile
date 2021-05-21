@@ -8,20 +8,17 @@ pipeline {
             }
         stage("Build Web") {
             steps {
-                echo "===== OPTIONAL: Will build the website (if needed) ====="
 				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.sln"
             }
         }
         stage("Build API") {
             steps {
-                echo "===== REQUIRED: Will build the API project ====="
 				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.csproj"
             }
         }
         stage("Test API") {
             steps {
-                echo "===== REQUIRED: Will execute unit tests of the API project ====="
-		        sh "dotnet test test/UnitTest UnitTest.csproj"
+		        sh "dotnet test BookStoreUnitTest/BookStoreUnitTest.csproj"
             }
         }
 	stage("Deliver Web and Api") {
@@ -32,14 +29,14 @@ pipeline {
 					sh "docker push ??"
 				},
 				deliverApi: {
-					echo "===== REQUIRED: Will deliver the website to Docker Hub ====="
-		            sh "docker build . -t dpankov91/bookstore"
+		            sh "docker build . -t bookstore"
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
                     {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                     }
-                    sh "docker push dpankov91/?1"
-				    }
+                    sh "docker image tag bookstore dpankov91/bookstore" 
+                    sh "docker push dpankov91/bookstore"
+				    }	
 			)
             }
         }	
