@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Core.Entities", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Infrastructure.Data", "..\BookStore.Infrastructure.Data\BookStore.Infrastructure.Data.csproj", "{495B82D9-63F5-42E3-ABE2-D09D8F8C6251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreUnitTest", "..\BookStoreUnitTest\BookStoreUnitTest.csproj", "{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreUnitTest", "..\BookStoreUnitTest\BookStoreUnitTest.csproj", "{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest", "..\XUnitTest\XUnitTest.csproj", "{B14E7B85-1F94-4791-AF9D-282ACA2A0A00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14E7B85-1F94-4791-AF9D-282ACA2A0A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14E7B85-1F94-4791-AF9D-282ACA2A0A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14E7B85-1F94-4791-AF9D-282ACA2A0A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14E7B85-1F94-4791-AF9D-282ACA2A0A00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{1A63565B-E9C9-4F3F-8DDC-B81EA104A0FD} = {BF94C17E-9705-41FC-A27F-7A113AA5BD43}
 		{495B82D9-63F5-42E3-ABE2-D09D8F8C6251} = {684F249F-CE7E-44BD-914E-F27DF7BE0D4A}
 		{1DFA88E1-FE19-4E10-8E17-C477F2D2FBD1} = {067CE377-5E02-4698-8066-3C595AB6547F}
+		{B14E7B85-1F94-4791-AF9D-282ACA2A0A00} = {067CE377-5E02-4698-8066-3C595AB6547F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DC275C9-C50C-4240-B3D1-6FC505123762}

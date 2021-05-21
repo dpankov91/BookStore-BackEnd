@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Test API") {
             steps {
-		        sh "dotnet test BookStoreUnitTest/BookStoreUnitTest.csproj"
+		        sh "dotnet test XUnitTest/XUnitTest.csproj"
             }
         }
 	stage("Deliver Web and Api") {
