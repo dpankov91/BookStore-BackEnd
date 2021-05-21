@@ -26,8 +26,14 @@ pipeline {
         	steps {
 			parallel(
 				deliverWeb: {
-					sh "docker build ./src/?? -t ??"
-					sh "docker push ??"
+					    sh "docker build . -t bookstoref"
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
+                    {
+                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                    }
+                    sh "docker image tag bookstoref dpankov91/bookstoref" 
+                    sh "docker push dpankov91/bookstoref"
+				    }	
 				},
 				deliverApi: {
 		            sh "docker build . -t bookstore"
