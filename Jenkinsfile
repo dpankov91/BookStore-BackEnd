@@ -34,7 +34,8 @@ pipeline {
                     sh "docker image tag bookstoref dpankov91/bookstoref" 
                     sh "docker push dpankov91/bookstoref"
 				    }	
-				},
+				}
+    },
 				deliverApi: {
 		            sh "docker build . -t bookstore"
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
