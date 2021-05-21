@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage("Pull frontend repository") {
             steps {
+                sh "rm -r BookStore-FrontEnd"
                 sh "git clone https://github.com/dpankov91/BookStore-FrontEnd BookStore-FrontEnd"
             }
         }
