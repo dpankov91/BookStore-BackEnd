@@ -6,6 +6,7 @@ pipeline {
                 sh "rm -r BookStore-FrontEnd"
                 sh "git clone https://github.com/dpankov91/BookStore-FrontEnd BookStore-FrontEnd"
             }
+        }
         stage("Build Web") {
             steps {
 				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.sln"
@@ -54,5 +55,4 @@ pipeline {
             }
         }
     }
-}
 }
