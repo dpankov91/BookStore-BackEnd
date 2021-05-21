@@ -24,12 +24,11 @@ pipeline {
         }
         stage("Deliver API") {     
             steps {
-             sh "docker build BookStore-BackEnd/. -t bookstore -f Dockerfile"
+             sh "docker build . -t dpankov91/bookstore"
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
                     {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                     }
-                    sh "docker image tag bookstore dpankov91/bookstore" 
                     sh "docker push dpankov91/bookstore"
 				    }	
             }
