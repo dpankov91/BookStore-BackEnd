@@ -9,7 +9,7 @@ pipeline {
         }
         stage("Build Web") {
             steps {
-				sh "dotnet build BookStore-FrontEnd/bookstore-app-angular/src/index.html"
+				echo "build web"
             }
         }
         stage("Build API") {
