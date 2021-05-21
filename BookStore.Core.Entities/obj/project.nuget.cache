@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pIq1+94Gm0hu17ReIY+xYXxAUFMUQmFXQBK9I5bQ2UYZ5RXmbzlCNXTl2xZSVNlRrP99dW7OuXZWi0rzkSMrnw==",
+  "dgSpecHash": "L3uaGeLDvoyeIclDLWBTzGZ76pn8JymLZVpftYwbiv3o2ZlPwfsuLqR0VPaOcfFNGo9116BiTex67pWHhFkfQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\BookStore-BackEnd\\BookStore.Core.Entities\\BookStore.Core.Entities.csproj",
+  "projectFilePath": "C:\\Users\\kulsoom-Abbas\\source\\DevOps\\BookStoreBackend\\BookStore-BackEnd\\BookStore.Core.Entities\\BookStore.Core.Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dpank\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\dpank\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
