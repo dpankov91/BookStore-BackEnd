@@ -24,12 +24,12 @@ pipeline {
         }
         stage("Deliver API") {     
             steps {
+                sh "dockerd"
                 sh "docker build . -t dpankov91/bookstore"
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
-                }
-                sh "dockerd"
+                }            
                 sh "docker push dpankov91/bookstore"
 				}	
             }
