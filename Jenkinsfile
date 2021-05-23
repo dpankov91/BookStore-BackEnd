@@ -24,7 +24,7 @@ pipeline {
         }
         stage("Deliver API") {     
             steps {
-                sh "restart docker"
+                sh "start docker"
                 sh "docker build . -t dpankov91/bookstore"
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']])
                 {
