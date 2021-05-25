@@ -35,8 +35,6 @@ pipeline {
         stage("Release staging environment") {
             steps {
                 echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
-		        sh "docker-compose pull"
-                sh "docker-compose up -d --build"
                 sh "docker-compose up flyway"
             }
         }
