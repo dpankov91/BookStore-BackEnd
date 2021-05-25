@@ -30,8 +30,8 @@ pipeline {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }            
                 sh "docker push dpankov91/bookstore"
-				}	
-            }
+	    }	
+        }
         stage("Release staging environment") {
             steps {
                 echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
