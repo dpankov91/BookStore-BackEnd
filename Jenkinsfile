@@ -5,13 +5,14 @@ pipeline {
             steps {
                 sh "rm -r BookStore-FrontEnd"
                 sh "git clone https://github.com/dpankov91/BookStore-FrontEnd BookStore-FrontEnd"
+                sh "cd BookStore-FrontEnd/bookstore-app-angular/src"
+                sh "npm install" 
+                sh "ng build --prod" 
             }
         }
         stage("Build Web") {
             steps {
-				sh "cd BookStore-FrontEnd"
-                sh "npm install" 
-                sh "ng build --prod" 
+				echo "build web"
             }
         }
         stage("Build API") {
