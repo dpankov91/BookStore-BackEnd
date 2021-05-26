@@ -9,7 +9,9 @@ pipeline {
         }
         stage("Build Web") {
             steps {
-				echo "build web"
+				sh "cd BookStore-FrontEnd/bookstore-app-angular"
+                sh "npm install" 
+                sh "ng build --prod" 
             }
         }
         stage("Build API") {
@@ -37,7 +39,6 @@ pipeline {
                 echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
                 sh "docker-compose pull"
                 sh "docker-compose up -d --build"
-                sh "docker-compose up flyway"
             }
         }
         stage("Automated acceptance test") {
