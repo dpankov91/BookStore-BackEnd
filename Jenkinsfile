@@ -9,7 +9,7 @@ pipeline {
         }
         stage("Build Web") {
             steps {
-				sh "cd BookStore-FrontEnd/bookstore-app-angular"
+				sh "cd BookStore-FrontEnd/bookstore-app-angular/src"
                 sh "npm install" 
                 sh "ng build --prod" 
             }
