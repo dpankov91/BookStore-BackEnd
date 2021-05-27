@@ -1,20 +1,9 @@
 pipeline {
     agent any
+    triggers {
+		pollSCM("0 * * * *")
+	}
     stages {
-        stage("Pull frontend repository") {
-            steps {
-                sh "rm -r BookStore-FrontEnd"
-                sh "git clone https://github.com/dpankov91/BookStore-FrontEnd BookStore-FrontEnd"
-                sh "cd BookStore-FrontEnd/bookstore-app-angular/src"
-                sh "npm install" 
-                sh "ng build --prod" 
-            }
-        }
-        stage("Build Web") {
-            steps {
-				echo "build web"
-            }
-        }
         stage("Build API") {
             steps {
 				sh "dotnet build BookStore-BackEnd/BookStore-BackEnd.csproj"
@@ -37,14 +26,8 @@ pipeline {
         }
         stage("Release staging environment") {
             steps {
-                echo "===== REQUIRED: Will use Docker Compose to spin up a test environment ====="
                 sh "docker-compose pull"
                 sh "docker-compose up -d --build"
-            }
-        }
-        stage("Automated acceptance test") {
-            steps {
-                echo "===== REQUIRED: Will use Selenium to execute automatic acceptance tests ====="
             }
         }
     }
