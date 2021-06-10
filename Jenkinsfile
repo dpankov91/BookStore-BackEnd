@@ -2,6 +2,7 @@ pipeline {
     agent any
     triggers {
 		cron("0 * * * *")
+        pollSCM("* * * * *")
 	}
     stages {
         stage("Build API") {
@@ -21,7 +22,7 @@ pipeline {
                 {
                     sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }            
-                sh "docker push dpankov91/bookstore"
+                sh "    tore"
 	        }	
         }
         stage("Release staging environment") {
